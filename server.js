@@ -17,6 +17,9 @@ redirects.get('/*',function(req,res,next){
   if (req.hostname != 'kevinmccarthy.org') {
     res.redirect(301, 'https://kevinmccarthy.org' + req.path);
   }
+  else {
+    next();
+  }
 });
 
 ghost({
