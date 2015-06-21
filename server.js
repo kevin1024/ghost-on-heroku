@@ -13,6 +13,12 @@ redirects.get('/*',function(req,res,next){
   next();
 });
 
+redirects.get('/*',function(req,res,next){
+  if (req.hostname != 'kevinmccarthy.org') {
+    res.redirect(301, 'https://kevinmccarthy.org' + req.path);
+  }
+});
+
 ghost({
   config: path.join(__dirname, 'config.js')
 }).then(function (ghostServer) {
