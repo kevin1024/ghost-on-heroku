@@ -8,7 +8,10 @@
 
 <header class="main-header post-head {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
     <nav class="main-nav {{#if image}}overlay{{/if}} clearfix">
-        {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
+        <a class="blog-logo" href="{{@blog.url}}">
+          <img class="author-thumb" src="https://www.gravatar.com/avatar/b3b78ba1acbf09ba202987d2d93ab72f?s=250&d=mm&r=x" alt="Author image" nopin="nopin" />
+          kevinmccarthy.org
+        </a>
         {{#if @blog.navigation}}
             <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
         {{/if}}
