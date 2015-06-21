@@ -8,6 +8,11 @@ redirects.all('/blog/*', function(req, res) {
   res.redirect(301, newpath);
 });
 
+redirects.get('/*',function(req,res,next){
+  res.header('X-IsKevinAwesome' , 'OfCourse' );
+  next();
+});
+
 ghost({
   config: path.join(__dirname, 'config.js')
 }).then(function (ghostServer) {
