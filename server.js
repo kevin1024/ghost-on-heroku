@@ -10,7 +10,6 @@ redirects.all('/blog/*', function(req, res) {
 
 redirects.get('/*',function(req,res,next){
   res.header('X-IsKevinAwesome' , 'OfCourse' );
-  console.log(req.headers);
   next();
 });
 
