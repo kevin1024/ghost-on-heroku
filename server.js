@@ -14,7 +14,7 @@ redirects.get('/*',function(req,res,next){
 });
 
 redirects.get('/*',function(req,res,next){
-  if (req.hostname != 'kevinmccarthy.org') {
+  if (req.hostname == 'kevinmccarthyorg.herokuapp.com') {
     res.redirect(301, 'https://kevinmccarthy.org' + req.path);
   }
   else {
