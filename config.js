@@ -25,7 +25,7 @@ config = {
 
   // Production (Heroku)
   production: {
-    url: 'http://kevinmccarthy.org',
+    url: 'https://kevinmccarthy.org',
     mail: {
       transport: 'SMTP',
       host: 'smtp.mandrillapp.com',
